@@ -3,81 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dili Libaas</title>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <title>Dili Libaas — Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Poppins:wght@300;500&display=swap" rel="stylesheet">
     <style>
         body {
             margin: 0;
             padding: 0;
-            background: #f9e7e7;
-            font-family: 'Poppins', sans-serif;
+            background: #f9e7e7;  /* Soft peach-pink tone matching your logo */
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
-            min-height: 100vh;
-            text-align: center;
-            color: #4b1c1c;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            overflow: hidden;
         }
-        img {
-            width: 200px;
+        .logo img {
+            max-width: 180px;
             margin-bottom: 20px;
+            opacity: 0;
+            transform: translateY(-20px);
+            animation: fadeIn 1s forwards;
         }
         h1 {
             font-family: 'Playfair Display', serif;
-            font-size: 38px;
+            font-size: 2.2rem;
             margin: 10px 0;
-            color: #3a1c1c;
+            color: #444;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s 0.5s forwards;
         }
         p {
-            font-size: 18px;
-            margin: 8px 0;
+            font-size: 1rem;
+            margin: 10px 0 20px;
+            color: #666;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 1s 1s forwards;
         }
-        .links a {
-            display: inline-block;
-            margin: 10px;
-            padding: 10px 20px;
-            border-radius: 25px;
+        .buttons {
+            opacity: 0;
+            animation: fadeIn 1s 1.5s forwards;
+        }
+        .buttons a {
             text-decoration: none;
+            margin: 0 10px;
+            padding: 12px 20px;
+            border-radius: 30px;
+            background: #e91e63;
             color: white;
-            background: #E1306C;
-            transition: 0.3s ease;
+            font-weight: 500;
+            display: inline-block;
+            transition: transform 0.3s ease, background 0.3s ease;
         }
-        .links a:hover {
-            background: #b02455;
-        }
-        .whatsapp {
-            background: #25D366;
+        .buttons a:hover {
+            transform: translateY(-3px);
+            background: #c2185b;
         }
         .address {
-            margin-top: 15px;
-            font-size: 16px;
-            color: #5c3b3b;
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #777;
+            opacity: 0;
+            animation: fadeIn 1s 2s forwards;
         }
-        footer {
-            margin-top: 30px;
-            font-size: 13px;
-            color: #987b7b;
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
 <body>
+    <div class="logo">
+        <img src="your-logo.png" alt="Dili Libaas Logo">
+    </div>
+    <h1>Fashion that touches your heart</h1>
+    <p>Our exclusive non-stitched collection is coming soon!</p>
 
-    <img src="logo.png" alt="Dili Libaas Logo">
-    <h1>DILI LIBAAS</h1>
-    <p>Libaas Jo Dil Chhu Le</p>
-    <p>Where Style Meets Elegance — Coming Soon!</p>
-
-    <div class="links">
-        <a href="https://wa.me/917887221233" class="whatsapp" target="_blank">WhatsApp Us</a>
+    <div class="buttons">
+        <a href="https://wa.me/917887221233" target="_blank">Chat on WhatsApp</a>
         <a href="https://instagram.com/dililibaas" target="_blank">Follow on Instagram</a>
     </div>
 
-    <p class="address"><strong>Address:</strong> Near Ibadan Market, Near Hasnamau Turn</p>
-
-    <footer>
-        &copy; 2025 Dili Libaas. All rights reserved.
-    </footer>
-
+    <div class="address">
+        Near Ibadan Market, Near Hasnamau Turn
+    </div>
 </body>
 </html>
