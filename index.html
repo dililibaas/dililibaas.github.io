@@ -1,78 +1,98 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DILI LIBAAS — Coming Soon</title>
+    <title>Dili Libaas — Coming Soon</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto&display=swap');
+
         body {
             margin: 0;
             padding: 0;
-            background-color: #F7E3E1; /* exact soft blush from logo */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #F9E4E2;
+            font-family: 'Roboto', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
             flex-direction: column;
-            animation: fadeIn 2s ease forwards;
-        }@keyframes fadeIn {
-        0% { opacity: 0; transform: translateY(20px); }
-        100% { opacity: 1; transform: translateY(0); }
-    }
+            text-align: center;
+            animation: fadeIn 2s ease;
+        }
 
-    img {
-        width: 150px;
-        margin-bottom: 20px;
-        animation: fadeIn 1.5s ease forwards;
-    }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
 
-    h1 {
-        color: #4B3A3A;
-        font-size: 2rem;
-        text-align: center;
-        margin: 10px 0;
-    }
+        img {
+            width: 180px;
+            margin-bottom: 20px;
+            animation: popIn 1.2s ease;
+        }
 
-    p {
-        color: #6B4C4C;
-        font-size: 1rem;
-        margin: 5px 0 20px;
-        text-align: center;
-    }
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
 
-    .btn {
-        background-color: #D82B5F;
-        color: white;
-        padding: 12px 24px;
-        margin: 10px;
-        border: none;
-        border-radius: 30px;
-        text-decoration: none;
-        display: inline-block;
-        font-weight: bold;
-        transition: transform 0.3s ease;
-    }
+        h1 {
+            font-family: 'Playfair Display', serif;
+            color: #4A2C2A;
+            margin-bottom: 10px;
+            animation: slideIn 1.5s ease;
+        }
 
-    .btn:hover {
-        transform: scale(1.05);
-    }
+        @keyframes slideIn {
+            from { transform: translateY(-30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
 
-    .address {
-        margin-top: 20px;
-        color: #6B4C4C;
-        font-size: 0.9rem;
-    }
-</style>
+        p {
+            color: #5A3D3C;
+            margin-bottom: 30px;
+            font-size: 1rem;
+        }
 
+        .buttons a {
+            background-color: #D6336C;
+            color: white;
+            padding: 12px 25px;
+            border-radius: 30px;
+            margin: 10px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            display: inline-block;
+        }
+
+        .buttons a:hover {
+            background-color: #B02A5B;
+        }
+
+        .address {
+            margin-top: 30px;
+            color: #5A3D3C;
+            font-size: 0.9rem;
+        }
+    </style>
 </head>
 <body>
-    <img src="logo.png" alt="DILI LIBAAS Logo">
+
+    <img src="logo.png" alt="Dili Libaas Logo">
+
     <h1>Fashion that touches your heart</h1>
     <p>Our exclusive non-stitched collection is coming soon!</p>
-    <div>
-        <a href="https://wa.me/919000000000" class="btn">Chat on WhatsApp</a>
-        <a href="https://instagram.com/yourhandle" class="btn">Follow on Instagram</a>
+
+    <div class="buttons">
+        <a href="https://wa.me/919198455588" target="_blank">Chat on WhatsApp</a>
+        <a href="https://instagram.com/dililibas" target="_blank">Follow on Instagram</a>
     </div>
-    <div class="address">Near Ibadan Market, Near Hasnamau Turn</div>
+
+    <div class="address">
+        Near Ibadat Market, Near Hasnamau Turn
+    </div>
+
 </body>
 </html>
