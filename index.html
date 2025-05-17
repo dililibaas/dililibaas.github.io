@@ -71,6 +71,13 @@
             background-color: #B02A5B;
         }
 
+        .countdown {
+            font-size: 1.5rem;
+            margin-top: 20px;
+            font-weight: bold;
+            color: #6D2F3B;
+        }
+
         .address {
             margin-top: 30px;
             color: #5A3D3C;
@@ -90,9 +97,33 @@
         <a href="https://instagram.com/dililibaas" target="_blank">Follow on Instagram</a>
     </div>
 
+    <div class="countdown" id="countdown">Loading countdown...</div>
+
     <div class="address">
         Near Ibadat Market, Near Hasnamau Turn
     </div>
+
+    <script>
+        const launchDate = new Date("2025-05-22T11:00:00").getTime();
+
+        const countdownFunc = setInterval(function () {
+            const now = new Date().getTime();
+            const timeLeft = launchDate - now;
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            if (timeLeft > 0) {
+                document.getElementById("countdown").innerHTML =
+                    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                clearInterval(countdownFunc);
+                document.getElementById("countdown").innerHTML = "We are now LIVE!";
+            }
+        }, 1000);
+    </script>
 
 </body>
 </html>
