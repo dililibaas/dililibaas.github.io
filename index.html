@@ -1,111 +1,110 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dili Libaas | Premium Ladies Fabric Collection Online</title>
-  <meta name="description" content="Dili Libaas - premium ladies fabrics, casual wear, party wear, ethnic wear, chikankaari and digital prints. Order on WhatsApp. All India delivery.">
-
-  <style>
-    body{margin:0;font-family:Arial,sans-serif;background:#fff8f8;color:#3b151d}
-    header{display:flex;justify-content:space-between;align-items:center;padding:18px 7%;background:#fff;box-shadow:0 2px 12px #eee;position:sticky;top:0;z-index:10}
-    .logo{width:150px}
-    nav a{margin:0 14px;text-decoration:none;color:#3b151d;font-weight:700}
-    .whatsapp{background:#8b0f35;color:white;padding:12px 22px;border-radius:30px;text-decoration:none;font-weight:700}
-    .hero{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center;padding:70px 7%;background:#fdebed}
-    .hero h1{font-size:58px;margin:0;color:#6b1830}
-    .hero h2{color:#d6336c;font-size:28px}
-    .hero img{width:100%;border-radius:24px;box-shadow:0 15px 35px #d8b5b5}
-    .btn{display:inline-block;background:#d6336c;color:white;padding:14px 28px;border-radius:30px;text-decoration:none;font-weight:700;margin-top:15px}
-    section{padding:55px 7%;text-align:center}
-    h2{font-size:34px;color:#5b1d2b}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px}
-    .card{background:white;border-radius:18px;overflow:hidden;text-decoration:none;color:#3b151d;box-shadow:0 8px 25px #ead6d6;transition:.3s}
-    .card:hover{transform:translateY(-6px)}
-    .card img{width:100%;height:230px;object-fit:cover}
-    .card h3{color:#8b0f35;font-size:24px}
-    .strip{background:#8b0f35;color:white;padding:35px;border-radius:22px}
-    footer{background:#4a1322;color:white;padding:40px 7%;text-align:center}
-    footer a{color:#ffd6df}
-    .float{position:fixed;right:20px;bottom:20px;background:#25D366;color:white;padding:14px 20px;border-radius:40px;text-decoration:none;font-weight:700}
-    @media(max-width:800px){.hero{grid-template-columns:1fr}.hero h1{font-size:40px}nav{display:none}}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dili Libaas</title>
+<style>
+body{margin:0;font-family:Arial,sans-serif;background:#fbf7f0;color:#3b2118}
+.topbar{background:#3b2118;color:white;text-align:center;padding:10px}
+header{display:flex;justify-content:space-between;align-items:center;padding:15px 5%;background:white;position:sticky;top:0}
+.logo{display:flex;align-items:center;gap:10px}
+.logo img{width:70px}
+nav a{text-decoration:none;margin:10px;color:#3b2118}
+.hero{display:grid;grid-template-columns:1fr 1fr;padding:60px 5%;background:#f7efe5}
+.hero h1{font-size:50px}
+.btn{background:#6d2e1f;color:white;padding:12px 25px;text-decoration:none}
+.heroimg{
+height:450px;
+background:url('https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=1000&q=80');
+background-size:cover;border-radius:20px}
+.section{padding:50px 5%;text-align:center}
+.categories{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{height:220px;background:#ddd;border-radius:10px;color:white;
+display:flex;align-items:end;justify-content:center;padding:15px;
+font-size:22px;background-size:cover;position:relative}
+.card span{position:relative;z-index:1}
+.card:before{content:'';position:absolute;inset:0;background:linear-gradient(transparent,black)}
+.c1{background-image:url('https://images.unsplash.com/photo-1603217040830-34473db521a2?auto=format&fit=crop&w=700&q=80')}
+.c2{background-image:url('https://images.unsplash.com/photo-1597983073493-88cd35cf93b0?auto=format&fit=crop&w=700&q=80')}
+.c3{background-image:url('https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?auto=format&fit=crop&w=700&q=80')}
+.c4{background-image:url('https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=700&q=80')}
+.c5{background-image:url('https://images.unsplash.com/photo-1603252109303-2751441dd157?auto=format&fit=crop&w=700&q=80')}
+.c6{background-image:url('https://images.unsplash.com/photo-1610030468709-1e2f46e3d3dc?auto=format&fit=crop&w=700&q=80')}
+.contact{background:#3b2118;color:white;text-align:center;padding:50px}
+.icon{font-size:30px;margin:10px;text-decoration:none;color:white}
+footer{background:#24130d;color:white;text-align:center;padding:20px}
+@media(max-width:768px){
+.hero,.categories{grid-template-columns:1fr}
+.hero h1{font-size:35px}
+}
+</style>
 </head>
-
 <body>
 
-<header>
-  <img src="logo.png" class="logo" alt="Dili Libaas Logo">
-  <nav>
-    <a href="#categories">Categories</a>
-    <a href="#order">Order</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <a class="whatsapp" href="https://wa.me/917887221233" target="_blank">WhatsApp Order</a>
-</header>
+<div class="topbar">🚚 ALL INDIA DELIVERY AVAILABLE</div>
 
-<div class="hero">
-  <div>
-    <h1>Dili Libaas</h1>
-    <h2>Libaas Jo Dil Chhu Le</h2>
-    <p>Premium ladies fabric collection for casual wear, party wear, ethnic wear, chikankaari and digital prints. Order easily through WhatsApp with delivery all over India.</p>
-    <a class="btn" href="https://wa.me/917887221233?text=Hello%20Dili%20Libaas%2C%20please%20share%20latest%20fabric%20collection" target="_blank">Order on WhatsApp</a>
-  </div>
-  <img src="party.jpg" alt="Premium ladies fabric collection">
+<header>
+<div class="logo">
+<img src="logo.png">
+<h2>DILI LIBAAS</h2>
 </div>
 
-<section id="categories">
-  <h2>Shop By Category</h2>
-  <div class="grid">
-    <a class="card" href="https://wa.me/917887221233?text=Hello%20Dili%20Libaas%2C%20please%20share%20Casual%20Wear%20collection" target="_blank">
-      <img src="casual.jpg" alt="Casual Wear Fabric">
-      <h3>Casual Wear</h3>
-      <p>Comfortable everyday cotton fabrics</p>
-    </a>
+<nav>
+<a href="#">Home</a>
+<a href="#">New Arrivals</a>
+<a href="#">Ethnic</a>
+<a href="#">Chikankari</a>
+<a href="#">Contact</a>
+</nav>
+</header>
 
-    <a class="card" href="https://wa.me/917887221233?text=Hello%20Dili%20Libaas%2C%20please%20share%20Party%20Wear%20collection" target="_blank">
-      <img src="party.jpg" alt="Party Wear Fabric">
-      <h3>Party Wear</h3>
-      <p>Stylish elegant fabrics for occasions</p>
-    </a>
-
-    <a class="card" href="https://wa.me/917887221233?text=Hello%20Dili%20Libaas%2C%20please%20share%20Ethnic%20Wear%20collection" target="_blank">
-      <img src="ethnic.jpg" alt="Ethnic Wear Fabric">
-      <h3>Ethnic Wear</h3>
-      <p>Traditional and festive fabric collection</p>
-    </a>
-
-    <a class="card" href="https://wa.me/917887221233?text=Hello%20Dili%20Libaas%2C%20please%20share%20Chikankaari%20collection" target="_blank">
-      <img src="chikankaari.jpg" alt="Chikankaari Fabric">
-      <h3>Chikankaari</h3>
-      <p>Beautiful chikankaari fabrics</p>
-    </a>
-
-    <a class="card" href="https://wa.me/917887221233?text=Hello%20Dili%20Libaas%2C%20please%20share%20Digital%20Prints%20collection" target="_blank">
-      <img src="digital.jpg" alt="Digital Print Fabric">
-      <h3>Digital Prints</h3>
-      <p>Trendy digital print fabrics</p>
-    </a>
-  </div>
+<section class="hero">
+<div>
+<h1>Premium Fabrics For Every Occasion</h1>
+<p>Discover ethnic wear, party wear, dress materials and exclusive Chikankari collections.</p>
+<br>
+<a class="btn" href="#shop">Explore Collection</a>
+</div>
+<div class="heroimg"></div>
 </section>
 
-<section id="order">
-  <div class="strip">
-    <h2 style="color:white">Order Through WhatsApp</h2>
-    <p>Send your requirement or product screenshot. We will share price, availability and delivery details.</p>
-    <a class="btn" href="https://wa.me/917887221233" target="_blank">Chat Now</a>
-  </div>
+<section class="section" id="shop">
+<h2>Shop by Collection</h2>
+
+<div class="categories">
+
+<div class="card c1"><span>Casual Wear</span></div>
+<div class="card c2"><span>Party Wear</span></div>
+<div class="card c3"><span>Ethnic Wear</span></div>
+<div class="card c4"><span>Dress Material</span></div>
+<div class="card c5"><span>Chikankari Collection</span></div>
+<div class="card c6"><span>New Arrivals</span></div>
+
+</div>
 </section>
 
-<footer id="contact">
-  <h3>Dili Libaas</h3>
-  <p>Libaas Jo Dil Chhu Le</p>
-  <p>WhatsApp: <a href="https://wa.me/917887221233">7887221233</a></p>
-  <p>Instagram: <a href="https://instagram.com/dililibaas" target="_blank">@dililibaas</a></p>
-  <p>Address: Near Ibadat Market, Hasnamau Turn, Shujaganj</p>
+<section class="contact">
+<h2>Contact Us</h2>
+
+<p><b>Dili Libaas</b></p>
+<p>📍 Near Ibadat Market, Hasnamau Turn, Shujaganj</p>
+
+<a class="icon" href="https://wa.me/917887221233">📞</a>
+<a class="icon" href="https://instagram.com/dililibaas">📷</a>
+
+<br><br>
+
+<a class="btn" href="https://wa.me/917887221233">
+Start Order
+</a>
+
+</section>
+
+<footer>
+© 2026 Dili Libaas | www.dililibaas.in
 </footer>
-
-<a class="float" href="https://wa.me/917887221233" target="_blank">WhatsApp</a>
 
 </body>
 </html>
