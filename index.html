@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Dili Libaas</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial, sans-serif;background:#fffaf4;color:#24110b}
+a{text-decoration:none;color:inherit}
+
+/* HEADER */
+.header{
+  height:120px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 55px;
+  background:#fffaf4;
+}
+.logo img{
+  width:230px;
+  height:auto;
+  display:block;
+}
+.nav{
+  display:flex;
+  align-items:center;
+  gap:34px;
+  font-size:15px;
+  font-weight:600;
+}
+.nav a.active{
+  color:#8d1d24;
+  border-bottom:2px solid #8d1d24;
+  padding-bottom:10px;
+}
+
+/* HERO */
+.hero{
+  display:grid;
+  grid-template-columns:48% 52%;
+  min-height:470px;
+  background:#f8ead9;
+}
+.hero-text{
+  position:relative;
+  padding:70px 35px 35px 110px;
+}
+.hero-text::before{
+  content:"";
+  position:absolute;
+  left:0;top:0;bottom:0;
+  width:90px;
+  background:radial-gradient(circle at left,#ecd5bd 1px,transparent 2px);
+  opacity:.35;
+}
+.hero-text h1{
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:54px;
+  line-height:1.15;
+  font-weight:500;
+  margin-bottom:20px;
+}
+.line{
+  width:360px;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  margin-bottom:22px;
+}
+.line::before,.line::after{
+  content:"";
+  height:1px;
+  background:#7e5b46;
+  flex:1;
+}
+.line span{font-size:22px;color:#7e5b46}
+.hero-text p{
+  font-size:17px;
+  line-height:1.6;
+  max-width:470px;
+  margin-bottom:24px;
+}
+.btn{
+  display:inline-block;
+  background:#35170e;
+  color:white;
+  padding:15px 28px;
+  border-radius:5px;
+  font-weight:700;
+  font-size:16px;
+}
+.features{
+  display:flex;
+  gap:36px;
+  margin-top:38px;
+}
+.feature{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-size:13px;
+}
+.feature-icon{
+  width:48px;height:48px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f2ddc3;
+  font-size:23px;
+}
+.feature b{display:block;font-size:14px;margin-bottom:3px}
+
+.hero-image{
+  background:url("hero.png") center center/cover no-repeat;
+  min-height:470px;
+}
+
+/* CATEGORY */
+.section{
+  padding:22px 70px 18px;
+  text-align:center;
+  background:#fffaf4;
+}
+.title{
+  font-family:Georgia,'Times New Roman',serif;
+  font-size:28px;
+  margin-bottom:22px;
+}
+.title span{color:#99644b;font-size:20px;margin:0 12px}
+
+.categories{
+  max-width:1260px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:26px;
+}
+.card{
+  background:#f4e6d6;
+  border:1px solid #ead8c4;
+  border-radius:8px;
+  overflow:hidden;
+}
+.card img{
+  width:100%;
+  height:125px;
+  object-fit:cover;
+  display:block;
+}
+.card h3{
+  min-height:44px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px;
+  font-size:16px;
+}
+
+/* PRODUCTS */
+.products{
+  max-width:1260px;
+  margin:0 auto;
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:26px;
+}
+.product{
+  position:relative;
+  background:#fff7ec;
+  border:1px solid #ead8c4;
+  border-radius:8px;
+  overflow:hidden;
+}
+.product img{
+  width:100%;
+  height:145px;
+  object-fit:cover;
+  display:block;
+}
+.badge{
+  position:absolute;
+  left:8px;top:8px;
+  background:#3a170d;
+  color:white;
+  padding:4px 9px;
+  border-radius:8px;
+  font-size:12px;
+}
+.heart{
+  position:absolute;
+  right:8px;top:8px;
+  width:27px;height:27px;
+  background:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.product-info{
+  padding:10px;
+  font-size:14px;
+  line-height:1.4;
+}
+.product-info b{display:block;margin-bottom:6px}
+.price{font-weight:800}
+
+/* BOTTOM CONTACT */
+.bottom-contact{
+  margin-top:10px;
+  background:#f3e6d8;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  padding:18px 110px;
+}
+.contact-box{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  border-right:1px solid #d7c0aa;
+}
+.contact-box:last-child{border-right:0}
+.circle{
+  width:52px;height:52px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:28px;
+  background:#a8323b;
+  color:white;
+}
+.wa{background:#2cbf4b}
+.insta{background:linear-gradient(45deg,#f9ce34,#ee2a7b,#6228d7)}
+.contact-text{
+  text-align:left;
+  font-size:15px;
+  line-height:1.45;
+}
+.contact-text b{font-size:17px}
+
+/* MOBILE */
+@media(max-width:950px){
+  .header{height:auto;padding:18px;flex-direction:column;gap:14px}
+  .logo img{width:180px}
+  .nav{flex-wrap:wrap;justify-content:center;gap:15px}
+  .hero{grid-template-columns:1fr}
+  .hero-text{padding:45px 25px}
+  .hero-text h1{font-size:40px}
+  .line{width:100%}
+  .features{flex-direction:column;gap:16px}
+  .hero-image{min-height:430px}
+  .categories{grid-template-columns:repeat(2,1fr)}
+  .products{grid-template-columns:repeat(2,1fr)}
+  .section{padding:25px 18px}
+  .bottom-contact{grid-template-columns:1fr;padding:18px}
+  .contact-box{border-right:0;border-bottom:1px solid #d7c0aa;padding:12px 0}
+  .contact-box:last-child{border-bottom:0}
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+  <a class="logo" href="#">
+    <img src="logo.png" alt="Dili Libaas Logo">
+  </a>
+
+  <nav class="nav">
+    <a class="active" href="#">Home</a>
+    <a href="#new">New Arrivals</a>
+    <a href="#casual">Casual Wear</a>
+    <a href="#party">Party Wear</a>
+    <a href="#ethnic">Ethnic Wear</a>
+    <a href="#dress">Dress Material</a>
+    <a href="#chikankari">Chikankari Collection</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Premium Fabrics For<br>Every Occasion</h1>
+    <div class="line"><span>❧</span></div>
+    <p>Discover ethnic wear, party wear, dress materials and exclusive Chikankari collections.</p>
+    <a class="btn" href="#categories">Explore Collection ›</a>
+
+    <div class="features">
+      <div class="feature"><div class="feature-icon">🏵</div><div><b>Premium Quality</b>Finest Fabrics</div></div>
+      <div class="feature"><div class="feature-icon">🍃</div><div><b>Elegant Designs</b>For Every You</div></div>
+      <div class="feature"><div class="feature-icon">🚚</div><div><b>All India Delivery</b>Available</div></div>
+    </div>
+  </div>
+
+  <div class="hero-image"></div>
+</section>
+
+<section class="section" id="categories">
+  <h2 class="title"><span>❖</span>Shop By Category<span>❖</span></h2>
+
+  <div class="categories">
+    <a class="card" id="new" href="#"><img src="hero.png"><h3>New Arrivals</h3></a>
+    <a class="card" id="casual" href="#"><img src="https://images.unsplash.com/photo-1597983073493-88cd35cf93b0?auto=format&fit=crop&w=500&q=80"><h3>Casual Wear</h3></a>
+    <a class="card" id="party" href="#"><img src="https://images.unsplash.com/photo-1603217040830-34473db521a2?auto=format&fit=crop&w=500&q=80"><h3>Party Wear</h3></a>
+    <a class="card" id="ethnic" href="#"><img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=500&q=80"><h3>Ethnic Wear</h3></a>
+    <a class="card" id="dress" href="#"><img src="hero.png"><h3>Dress Material</h3></a>
+    <a class="card" id="chikankari" href="#"><img src="https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?auto=format&fit=crop&w=500&q=80"><h3>Chikankari<br>Collection</h3></a>
+    <a class="card" href="#contact"><img src="https://images.unsplash.com/photo-1606760227091-3dd870d97f1d?auto=format&fit=crop&w=500&q=80"><h3>Contact</h3></a>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="title"><span>❖</span>Our Bestsellers<span>❖</span></h2>
+
+  <div class="products">
+    <div class="product"><span class="badge">New</span><span class="heart">♡</span><img src="hero.png"><div class="product-info"><b>Embroidered Chikankari<br>Suit Set</b><div class="price">₹2,499</div></div></div>
+    <div class="product"><span class="badge">New</span><span class="heart">♡</span><img src="https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?auto=format&fit=crop&w=500&q=80"><div class="product-info"><b>Elegant Chikankari<br>Kurta Set</b><div class="price">₹2,299</div></div></div>
+    <div class="product"><span class="badge">New</span><span class="heart">♡</span><img src="https://images.unsplash.com/photo-1597983073493-88cd35cf93b0?auto=format&fit=crop&w=500&q=80"><div class="product-info"><b>Handwork Straight<br>Suit Set</b><div class="price">₹2,199</div></div></div>
+    <div class="product"><span class="badge">New</span><span class="heart">♡</span><img src="https://images.unsplash.com/photo-1603217040830-34473db521a2?auto=format&fit=crop&w=500&q=80"><div class="product-info"><b>Chikankari Anarkali<br>Suit</b><div class="price">₹3,499</div></div></div>
+    <div class="product"><span class="badge">New</span><span class="heart">♡</span><img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=500&q=80"><div class="product-info"><b>Premium Chikankari<br>Kurta Set</b><div class="price">₹2,399</div></div></div>
+    <div class="product"><span class="badge">New</span><span class="heart">♡</span><img src="hero.png"><div class="product-info"><b>Cotton Chikankari<br>Suit Set</b><div class="price">₹1,999</div></div></div>
+  </div>
+</section>
+
+<section class="bottom-contact" id="contact">
+  <div class="contact-box">
+    <div class="circle">⌖</div>
+    <div class="contact-text"><b>Dili Libaas</b><br>Near Ibadat Market,<br>Hasnamau Turn,<br>Shujaganj, India</div>
+  </div>
+
+  <a class="contact-box" href="https://wa.me/917887221233" target="_blank">
+    <div class="circle wa">☏</div>
+    <div class="contact-text"><b>+91 78872 21233</b><br>Order on WhatsApp</div>
+  </a>
+
+  <a class="contact-box" href="https://instagram.com/dililibaas" target="_blank">
+    <div class="circle insta">◎</div>
+    <div class="contact-text"><b>@dililibaas</b><br>Follow Us on Instagram</div>
+  </a>
+</section>
+
+</body>
+</html>
