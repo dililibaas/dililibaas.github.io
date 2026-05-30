@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dili Libaas | Premium Fabrics</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:Arial, sans-serif;
+  background:#fffaf4;
+  color:#2f160f;
+}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;display:block}
+
+.topbar{
+  background:#3b1b12;
+  color:white;
+  text-align:center;
+  padding:9px;
+  font-size:14px;
+  letter-spacing:.5px;
+}
+
+/* Header */
+header{
+  background:#fffaf4;
+  padding:14px 6%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  border-bottom:1px solid #eadbc9;
+}
+.logo-box{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+.logo-box img{
+  width:165px;
+  max-height:90px;
+  object-fit:contain;
+}
+.logo-text{
+  font-family:Georgia,serif;
+  font-size:30px;
+  font-weight:bold;
+  letter-spacing:1px;
+  color:#3b1b12;
+}
+nav{
+  display:flex;
+  gap:22px;
+  font-size:14px;
+  font-weight:bold;
+}
+nav a:hover{color:#9b1f2b}
+
+/* Hero */
+.hero{
+  background:#f6e7d5;
+  padding:45px 6%;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:center;
+  gap:40px;
+}
+.hero-content h1{
+  font-family:Georgia,serif;
+  font-size:50px;
+  line-height:1.15;
+  margin-bottom:16px;
+}
+.hero-content p{
+  font-size:17px;
+  line-height:1.7;
+  color:#5d4035;
+  margin-bottom:25px;
+  max-width:520px;
+}
+.btn{
+  display:inline-block;
+  background:#3b1b12;
+  color:white;
+  padding:14px 28px;
+  border-radius:4px;
+  font-weight:bold;
+}
+.hero-img{
+  height:440px;
+  border-radius:18px;
+  background:url('hero.png') center/cover no-repeat;
+  box-shadow:0 18px 45px rgba(59,27,18,.18);
+}
+
+/* Features */
+.features{
+  padding:22px 6%;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+  background:white;
+}
+.feature{
+  background:#fffaf4;
+  border:1px solid #eadbc9;
+  padding:18px;
+  text-align:center;
+  border-radius:10px;
+}
+.feature h3{
+  font-size:17px;
+  margin-bottom:6px;
+}
+.feature p{
+  color:#6b5146;
+  font-size:14px;
+}
+
+/* Section */
+.section{
+  padding:52px 6%;
+  text-align:center;
+}
+.section h2{
+  font-family:Georgia,serif;
+  font-size:34px;
+  margin-bottom:10px;
+}
+.section .sub{
+  color:#6b5146;
+  margin-bottom:30px;
+}
+
+/* Categories */
+.categories{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:22px;
+}
+.category{
+  background:white;
+  border:1px solid #eadbc9;
+  border-radius:12px;
+  overflow:hidden;
+  box-shadow:0 8px 22px rgba(59,27,18,.08);
+  transition:.2s;
+}
+.category:hover{
+  transform:translateY(-4px);
+}
+.category img{
+  width:100%;
+  height:230px;
+  object-fit:cover;
+}
+.category h3{
+  padding:16px;
+  font-size:20px;
+}
+
+/* WhatsApp Order */
+.order{
+  background:#3b1b12;
+  color:white;
+  padding:52px 6%;
+  text-align:center;
+}
+.order h2{
+  font-family:Georgia,serif;
+  font-size:34px;
+  margin-bottom:12px;
+}
+.order p{
+  color:#f1dcc7;
+  margin-bottom:22px;
+}
+
+/* Contact */
+.contact{
+  background:#f6e7d5;
+  padding:28px 6%;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+.contact-card{
+  background:#fffaf4;
+  border:1px solid #eadbc9;
+  border-radius:12px;
+  padding:18px;
+  text-align:center;
+  line-height:1.6;
+}
+.contact-card .icon{
+  font-size:28px;
+  margin-bottom:8px;
+}
+.contact-card b{
+  display:block;
+  margin-bottom:4px;
+}
+
+footer{
+  background:#24100a;
+  color:#d9c7b8;
+  text-align:center;
+  padding:18px;
+  font-size:14px;
+}
+
+/* Mobile */
+@media(max-width:850px){
+  header{
+    flex-direction:column;
+    gap:12px;
+  }
+  nav{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:14px;
+  }
+  .hero{
+    grid-template-columns:1fr;
+    padding:35px 5%;
+  }
+  .hero-content h1{
+    font-size:38px;
+  }
+  .hero-img{
+    height:390px;
+  }
+  .features,
+  .categories,
+  .contact{
+    grid-template-columns:1fr;
+  }
+  .logo-box img{
+    width:135px;
+  }
+  .logo-text{
+    font-size:24px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="topbar">🚚 All India Delivery Available</div>
+
+<header>
+  <a href="#" class="logo-box">
+    <img src="logo.png" alt="Dili Libaas Logo" onerror="this.style.display='none'">
+    <span class="logo-text">DILI LIBAAS</span>
+  </a>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#categories">Collections</a>
+    <a href="#order">Order</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Premium Fabrics<br>For Every Occasion</h1>
+    <p>Discover beautiful dress materials, ethnic wear, party wear and Chikankari collections at Dili Libaas.</p>
+    <a class="btn" href="#categories">Explore Collection</a>
+  </div>
+
+  <div class="hero-img"></div>
+</section>
+
+<section class="features">
+  <div class="feature">
+    <h3>Premium Quality</h3>
+    <p>Selected fabrics for daily and occasion wear.</p>
+  </div>
+  <div class="feature">
+    <h3>Elegant Designs</h3>
+    <p>Simple, beautiful and stylish collections.</p>
+  </div>
+  <div class="feature">
+    <h3>All India Delivery</h3>
+    <p>Order directly through WhatsApp.</p>
+  </div>
+</section>
+
+<section class="section" id="categories">
+  <h2>Shop by Collection</h2>
+  <p class="sub">Choose your favourite category</p>
+
+  <div class="categories">
+    <a class="category" href="https://wa.me/917887221233" target="_blank">
+      <img src="hero.png" alt="New Arrivals">
+      <h3>New Arrivals</h3>
+    </a>
+
+    <a class="category" href="https://wa.me/917887221233" target="_blank">
+      <img src="https://images.unsplash.com/photo-1597983073493-88cd35cf93b0?auto=format&fit=crop&w=800&q=80" alt="Casual Wear">
+      <h3>Casual Wear</h3>
+    </a>
+
+    <a class="category" href="https://wa.me/917887221233" target="_blank">
+      <img src="https://images.unsplash.com/photo-1603217040830-34473db521a2?auto=format&fit=crop&w=800&q=80" alt="Party Wear">
+      <h3>Party Wear</h3>
+    </a>
+
+    <a class="category" href="https://wa.me/917887221233" target="_blank">
+      <img src="https://images.unsplash.com/photo-1617627143750-d86bc21e42bb?auto=format&fit=crop&w=800&q=80" alt="Ethnic Wear">
+      <h3>Ethnic Wear</h3>
+    </a>
+
+    <a class="category" href="https://wa.me/917887221233" target="_blank">
+      <img src="hero.png" alt="Dress Material">
+      <h3>Dress Material</h3>
+    </a>
+
+    <a class="category" href="https://wa.me/917887221233" target="_blank">
+      <img src="https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?auto=format&fit=crop&w=800&q=80" alt="Chikankari">
+      <h3>Chikankari Collection</h3>
+    </a>
+  </div>
+</section>
+
+<section class="order" id="order">
+  <h2>Like Any Design?</h2>
+  <p>Send us a message on WhatsApp and we will help you with price, stock and delivery.</p>
+  <a class="btn" href="https://wa.me/917887221233" target="_blank">Order on WhatsApp</a>
+</section>
+
+<section class="contact" id="contact">
+  <div class="contact-card">
+    <div class="icon">📍</div>
+    <b>Address</b>
+    Near Ibadat Market,<br>
+    Hasnamau Turn,<br>
+    Shujaganj, India
+  </div>
+
+  <a class="contact-card" href="https://wa.me/917887221233" target="_blank">
+    <div class="icon">📞</div>
+    <b>WhatsApp</b>
+    +91 78872 21233
+  </a>
+
+  <a class="contact-card" href="https://instagram.com/dililibaas" target="_blank">
+    <div class="icon">📷</div>
+    <b>Instagram</b>
+    @dililibaas
+  </a>
+</section>
+
+<footer>
+  © 2026 Dili Libaas | www.dililibaas.in
+</footer>
+
+</body>
+</html>
